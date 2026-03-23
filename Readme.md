@@ -31,38 +31,7 @@ In modern cloud environments, we are often drowning in data but starving for mea
 
 ## 🏗 System Architecture
 
-```mermaid
-graph TD
-    subgraph "AWS Account (Cost Source)"
-        A[EC2, S3, RDS, etc.]
-    end
-
-    subgraph "Interpretation Engine (Serverless)"
-        EB[EventBridge Scheduler]
-        L[Lambda: Contextual Interpreter]
-        CE[Cost Explorer API]
-    end
-
-    subgraph "Outputs & Notifications"
-        S3[S3 Dashboard]
-        SNS[SNS Topic]
-        EM[Email/Slack Alerts]
-    end
-
-    A -- Generates Costs --> CE
-    EB -- Triggers Weekly --> L
-    L -- Queries Raw Data --> CE
-    L -- Processes & Translates --> L
-    L -- Uploads Dashboard --> S3
-    L -- Publishes Alert --> SNS
-    SNS -- Delivers --> EM
-
-    style L fill:#f96,stroke:#333,stroke-width:2px
-    style CE fill:#69c,stroke:#333,stroke-width:1px
-    style EB fill:#bbf,stroke:#333,stroke-width:1px
-    style S3 fill:#dfd,stroke:#333,stroke-width:1px
-    style SNS fill:#fdd,stroke:#333,stroke-width:1px
-```
+![System Architecture](./System%20Architecture/System%20Architecture.png)
 
 ---
 
