@@ -69,4 +69,4 @@ Interpret demonstrates expertise in:
 - **Serverless Architecture:** Building scalable, event-driven systems.
 - **DevOps/SRE:** Implementing professional CI/CD and automation principles.
 
-> Developed with ❤️ by **Mohamed Labs**
+> Developed  by **Mohamed Labs**
